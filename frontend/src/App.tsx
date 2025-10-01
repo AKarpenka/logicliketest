@@ -1,11 +1,12 @@
 import { ConfigProvider } from 'antd';
 import { App as AntApp } from 'antd';
+import { ProjectIdeasList } from './features/project-ideas';
 
 function App() {
   return (
     <ConfigProvider>
       <AntApp>
-        <div>Hello World</div>
+        <ProjectIdeasList />
       </AntApp>
     </ConfigProvider>
   );
