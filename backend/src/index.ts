@@ -4,6 +4,10 @@ import compression from 'compression';
 import routes from './routes';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler';
 import { userRegistrationMiddleware } from './middleware/userRegistration';
+import { initializeDatabaseConfig } from './utils/databaseConfig';
+
+// Инициализируем конфигурацию базы данных
+initializeDatabaseConfig();
 
 const app = express();
 const PORT = process.env.PORT || 3000;

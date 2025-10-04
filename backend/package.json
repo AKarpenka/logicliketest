@@ -4,12 +4,19 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon src/index.ts",
+    "dev:neon": "cross-env DATABASE_USE_NEON=true nodemon src/index.ts",
+    "dev:local": "cross-env DATABASE_USE_NEON=false nodemon src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
+    "start:neon": "cross-env DATABASE_USE_NEON=true node dist/index.js",
+    "start:local": "cross-env DATABASE_USE_NEON=false node dist/index.js",
     "db:seed": "ts-node prisma/seed.ts",
     "db:migrate": "prisma migrate dev",
+    "db:migrate:reset": "prisma migrate reset",
     "db:generate": "prisma generate",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "db:setup:neon": "cross-env DATABASE_USE_NEON=true npx prisma migrate reset && npx prisma migrate dev && npx prisma db seed",
+    "db:setup:local": "cross-env DATABASE_USE_NEON=false npx prisma migrate reset && npx prisma migrate dev && npx prisma db seed"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +26,7 @@
     "@prisma/client": "^6.16.2",
     "compression": "^1.8.1",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "prisma": "^6.16.2"
   },
@@ -27,6 +35,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^24.6.0",
+    "cross-env": "^10.1.0",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
