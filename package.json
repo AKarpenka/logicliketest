@@ -13,8 +13,7 @@
     "dev:frontend": "cd frontend && npm run dev",
     "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
     "setup": "npm run install:all && npm run db:setup:neon",
-    "db:setup:neon": "cd backend && npm run db:setup:neon",
-    "vercel-build": "npm run build"
+    "db:setup:neon": "cd backend && npm run db:setup:neon"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
