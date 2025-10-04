@@ -1,4 +1,5 @@
 # LogicLike Test
+Демо деплой - https://logicliketest-front.vercel.app/
 
 ## Архитектура проекта
 
