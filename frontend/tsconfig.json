@@ -19,10 +19,14 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "baseUrl": ".",
+    "types": ["vite/client"],
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "src/vite-env.d.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
