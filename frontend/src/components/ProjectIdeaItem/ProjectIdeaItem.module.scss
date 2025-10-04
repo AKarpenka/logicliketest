@@ -1,0 +1,69 @@
+.listItem {
+  padding: 16px 0;
+  border-bottom: 1px solid #fff;
+  contain: layout style;
+  transform: translateZ(0);
+}
+
+.itemContent {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.itemText {
+  flex: 1;
+}
+
+.itemTitle {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.itemDescription {
+  color: #666;
+  font-size: 14px;
+}
+
+.voteSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 16px;
+  margin-top: 4px;
+}
+
+.voteButton {
+  background-color: #52c41a;
+  border: 1px solid #52c41a;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transform: translateZ(0);
+  will-change: background-color, border-color;
+
+  &:hover:not(:disabled) {
+    background-color: #389e0d !important;
+    border-color: #389e0d !important;
+    color: #fff !important;
+  }
+
+  &:disabled {
+    background-color: #d9d9d9 !important;
+    border-color: #d9d9d9 !important;
+    color: #999 !important;
+    cursor: not-allowed;
+    transition: none;
+  }
+}
+
+.voteCount {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  font-weight: 500;
+}

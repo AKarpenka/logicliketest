@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
-import { Spin } from 'antd';
-import { LoadingOutlined } from '@ant-design/icons';
+import Spin from 'antd/es/spin';
+import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
 import styles from './CustomSpinner.module.scss';
 import { DEFAULT_COLOR, DEFAULT_SIZE } from './constants';
 

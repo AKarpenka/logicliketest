@@ -1,11 +1,8 @@
-# LogicLike Project
-
-Полнофункциональное приложение для голосования за идеи развития проекта LogicLike.
+# LogicLike Test
 
 ## Архитектура
 
 ```
-logicLikeTest/
 backend/          # Node.js + Express + Prisma
 frontend/         # React + TypeScript + Vite
 ```

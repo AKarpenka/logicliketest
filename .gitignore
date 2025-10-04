@@ -10,6 +10,7 @@ build/
 
 # TypeScript build info
 *.tsbuildinfo
+*.d.ts
 tsconfig.tsbuildinfo
 tsconfig.node.tsbuildinfo
 

@@ -4,9 +4,18 @@ import { IProjectIdea } from '../types';
 const prisma = new PrismaClient();
 
 export class ProjectIdeaService {
-  async getAllIdeas(): Promise<IProjectIdea[]> {
-    return await prisma.projectIdea.findMany({
-      orderBy: { votes: 'desc' }
-    });
+  /**
+   * Получает идею по ID
+   */
+  async getIdeaById(projectIdeaId: string): Promise<IProjectIdea | null> {
+    try {
+      return await prisma.projectIdea.findUnique({
+        where: { id: projectIdeaId }
+      });
+    } catch (error) {
+      console.error('Ошибка при получении идеи по ID:', error);
+      
+      throw error;
+    }
   }
 }

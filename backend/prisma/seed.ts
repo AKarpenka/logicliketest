@@ -88,13 +88,11 @@ const projectIdeas = [
 async function main() {
   console.log('Начинаем заполнение базы данных...');
 
-  // Очищаем существующие данные
   await prisma.projectIdea.deleteMany();
   await prisma.user.deleteMany();
 
   console.log('Создаем идеи проекта...');
 
-  // Создаем идеи проекта
   for (const idea of projectIdeas) {
     await prisma.projectIdea.create({
       data: idea
