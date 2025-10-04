@@ -31,10 +31,13 @@ app.use(express.json());
 app.use(userRegistrationMiddleware);
 
 app.get('/', (req, res) => {
-  res.json({ message: 'LogicLike Test Backend is running' });
+  res.json({ 
+    message: 'LogicLike Test Backend is running',
+    routes: ['/api/project-ideas/with-vote-status', '/api/project-ideas/:id/vote']
+  });
 });
 
-app.use('/', routes);
+app.use('/api', routes);
 
 app.use(notFoundHandler);
 app.use(errorHandler);
